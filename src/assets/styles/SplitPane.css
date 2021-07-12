@@ -1,0 +1,10 @@
+
+.SplitPane-left{
+    display: inline-block;
+    width: 45%;
+}
+
+.SplitPane-rigth{
+    display: inline-block;
+    width: 45%;   
+}
