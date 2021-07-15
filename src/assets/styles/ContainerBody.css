@@ -1,3 +1,6 @@
+
 .ContainerBody{
+
+    background-image: url('../static/logo-captain-america.png');
     display:inline-block;
 }

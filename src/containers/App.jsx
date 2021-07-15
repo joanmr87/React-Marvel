@@ -18,7 +18,10 @@ function App() {
     <div className="App">
       <Header/>
       <ContainerBody>
-      <HeroeDetail heroe={charactersInfo.data.results[18]}/>
+      <SplitPane>
+        <HeroeDetail heroe={charactersInfo.data.results[14]}/>
+      </SplitPane>
+      
       </ContainerBody>
       <Footer/>
     </div>

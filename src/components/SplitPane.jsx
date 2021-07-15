@@ -1,17 +1,17 @@
-import React, { Children } from 'react';
+import React from 'react';
 import '../assets/styles/SplitPane.css'
 
-const SplitPane = ({Children}) => (   
+const SplitPane = (props) => (   
 
     <div className="SplitPane">
         <div className="SplitPane-left">
             <h1>Lista Heroes</h1>
-            {Children}
+            
           
         </div>
         <div className="SplitPane-rigth">
             <h1>Detalle Heroe</h1>
-            {Children}
+            <div>{props.children}</div>
             
         </div>
     </div>
