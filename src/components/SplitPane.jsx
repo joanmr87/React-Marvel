@@ -5,14 +5,12 @@ const SplitPane = (props) => (
 
     <div className="SplitPane">
         <div className="SplitPane-left">
-            <h1>Lista Heroes</h1>
+            {props.left}
             
           
         </div>
         <div className="SplitPane-rigth">
-            <h1>Detalle Heroe</h1>
-            <div>{props.children}</div>
-            
+            {props.right}            
         </div>
     </div>
     );

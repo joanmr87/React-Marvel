@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/HeroeDetail.css'
+import '../assets/styles/HeroeDetail.css';
 
 const HeroeDetail = (props) => (
     <div className="HeroContainer">   
