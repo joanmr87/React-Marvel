@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import '../assets/styles/App.css';
 
@@ -17,20 +17,23 @@ import Accordion from '../components/Accordion';
 
 function App() {
   console.log(charactersInfo);
+  const [selectedHeroe, setSelectedHeroe] = useState(10);
+
   return (
     <div className="App">
       <Header/>
       <ContainerBody>
       <SplitPane 
         right={ <>
-                <HeroeDetail heroe={charactersInfo.data.results[14]}/>
+                <HeroeDetail heroe={charactersInfo.data.results[selectedHeroe]} selectedHeroe={selectedHeroe} setSelectedHeroe={setSelectedHeroe}/>
                 <Accordion >                  
-                  <LinkList heroe={charactersInfo.data.results[14]}/>
+                  <LinkList heroe={charactersInfo.data.results[selectedHeroe]} selectedHeroe={selectedHeroe} setSelectedHeroe={setSelectedHeroe}/>
+
                 </Accordion>
                 </>
               }
               
-        left={ <HeroesList/>}>
+        left={ <HeroesList heroe={charactersInfo.data} selectedHeroe={selectedHeroe} setSelectedHeroe={setSelectedHeroe}/>}>
       </SplitPane>
       
       </ContainerBody>

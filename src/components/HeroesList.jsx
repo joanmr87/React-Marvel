@@ -1,13 +1,37 @@
-import React from 'react';
+import React from "react";
 
-import '../assets/styles/HeroesList.css'
+import "../assets/styles/HeroesList.css";
 
-const HeroesList = (props) => (
-    <div className="HeroesList">
-        <h3>Esto es el panel izquierdo</h3>
-      {props.children}
-    </div>
-);
-
+function HeroesList(props) {
+  
+  return (
+    <ul>
+      {props.heroe.results.map((elemento, i) => {
+        let colorFondo = "white";        
+        if (i === props.selectedHeroe) {
+          colorFondo = "lightblue";
+        }
+        return (
+          <li
+            key={elemento.id}
+            style={{
+              backgroundColor: colorFondo,
+            }}
+          >
+            <a 
+                onClick={() => {                
+                console.log("click " + elemento.name);
+                props.setSelectedHero(i);
+              }}
+              href={elemento.resourceURI}
+            >
+              {elemento.name}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
 
 export default HeroesList;
