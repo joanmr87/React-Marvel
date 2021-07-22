@@ -27,7 +27,7 @@ function App() {
         right={ <>
                 <HeroeDetail heroe={charactersInfo.data.results[selectedHeroe]} selectedHeroe={selectedHeroe} setSelectedHeroe={setSelectedHeroe}/>
                 <Accordion >                  
-                  <LinkList heroe={charactersInfo.data.results[selectedHeroe]} selectedHeroe={selectedHeroe} setSelectedHeroe={setSelectedHeroe}/>
+                  <LinkList heroeComics={charactersInfo.data.results[selectedHeroe].comics} selectedHeroe={selectedHeroe} setSelectedHeroe={setSelectedHeroe}/>
 
                 </Accordion>
                 </>

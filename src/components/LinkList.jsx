@@ -4,7 +4,7 @@ function LinkList(props) {
   return (
     <div>
       <ul>
-        {props.heroe.comics.items.map((elemento) => {
+        {props.heroeComics.items.map((elemento) => {
           return (
             <li>
               <a href="#">{elemento.name}</a>
