@@ -19,7 +19,8 @@ function HeroesList(props) {
             }}
           >
             <a className="a"
-                onClick={() => {                
+                onClick={(event) => {
+                event.preventDefault();                
                 console.log("click " + elemento.name);
                 props.setSelectedHero(i);
               }}
