@@ -11,7 +11,7 @@ import Footer from "../components/Footer.jsx";
 import SplitPane from "../components/SplitPane.jsx";
 import HeroeDetail from "../components/HeroeDetail";
 import HeroesList from "../components/HeroesList";
-import ComicsList from "../components/ComicsList";
+import LinkList from "../components/LinkList";
 import Accordion from "../components/Accordion";
 import SeriesList from "../components/SeriesList";
 import StoriesList from "../components/StoriesList";
@@ -32,24 +32,13 @@ function App() {
                 selectedHeroe={selectedHeroe}
                 setSelectedHeroe={setSelectedHeroe}
               />
-           
-                <ComicsList
-                  heroe={charactersInfo.data.results[selectedHeroe]}
-                  selectedHeroe={selectedHeroe}
-                  setSelectedHeroe={setSelectedHeroe}
-                />
-                <SeriesList
-                  heroe={charactersInfo.data.results[selectedHeroe]}
-                  selectedHeroe={selectedHeroe}
-                  setSelectedHeroe={setSelectedHeroe}
-                />
-                <StoriesList
-                  heroe={charactersInfo.data.results[selectedHeroe]}
-                  selectedHeroe={selectedHeroe}
-                  setSelectedHeroe={setSelectedHeroe}                
-                />
-            
-              
+              <Accordion
+                heroe={charactersInfo.data.results[selectedHeroe]}
+                selectedHeroe={selectedHeroe}
+                setSelectedHeroe={setSelectedHeroe}
+              >
+                <LinkList />
+              </Accordion>
             </>
           }
           left={

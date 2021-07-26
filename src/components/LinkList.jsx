@@ -1,10 +1,10 @@
 import React from "react";
 
-function ComicsList(props) {
+function LinkList(props) {
   return (
     <div>
       <ul>
-        {props.heroe.comics.items.map((elemento) => {
+        {props.lista.map((elemento) => {
           return (
             <li>
               <a>{elemento.name}</a>
@@ -16,4 +16,4 @@ function ComicsList(props) {
   );
 }
 
-export default ComicsList;
+export default LinkList;
